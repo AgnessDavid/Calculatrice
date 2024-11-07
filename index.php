@@ -1,24 +1,22 @@
 <?php
 
 
-if(isset($_POST['Calculer']))
+if (isset($_POST['Calculer'])) {
 
-{
-    
     $Nombre1 = $_POST['Nombre1'];
-    
+
     $Nombre2 = $_POST['Nombre2'];
-    
+
     $Operation = $_POST['Operation'];
-    
-    $resultat="";
-    
 
-switch($Operation){
+    $resultat = "";
 
-   case 'Addition':
-       $resultat = $Nombre1 + $Nombre2;
-   break;
+
+    switch ($Operation) {
+
+        case 'Addition':
+            $resultat = $Nombre1 + $Nombre2;
+            break;
 
         case 'Soustraction':
             $resultat = $Nombre1 - $Nombre2;
@@ -32,22 +30,18 @@ switch($Operation){
 
         case 'Division':
 
-    if($Nombre2 != 0){
+            if ($Nombre2 != 0) {
 
                 $resultat = $Nombre1 / $Nombre2;
+            } else {
 
-    } else {
-
- $resultat = "Erreur ce nombre ne peut pas être divisé par 2";
-
-    }
+                $resultat = "Erreur ce nombre ne peut pas être divisé par 2";
+            }
             break;
-          
-}
+    }
 
 
-$message =  $resultat;
-
+    $message =  $resultat;
 }
 
 
@@ -74,10 +68,10 @@ $message =  $resultat;
 
         <label for="Nombre1">Nombre1</label>
         <input type="number" name="Nombre1">
-
+        <br>
         <label for="Nombre2">Nombre2</label>
         <input type="number" name="Nombre2">
-
+        <br>
 
         <label for="Operation">Operation</label>
         <select name="Operation">
@@ -86,15 +80,16 @@ $message =  $resultat;
             <option value="Multiplication">Multiplication</option>
             <option value="Division">Division</option>
         </select>
-
+        <br>
         <button type="submit" name="Calculer">Resultat : </button>
 
-<label for="Resultat">Resultat</label>
-<input type="text" value="<?php if(isset($resultat))  echo $resultat; ?>" >
+        <label for="Resultat">Resultat</label>
+        <input type="text" value="<?php if (isset($resultat))  echo $resultat; ?>">
 
     </form>
 
 
 
 </body>
+
 </html>
