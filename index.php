@@ -45,7 +45,8 @@ switch($Operation){
           
 }
 
-echo "<h2>Résultat : $resultat </h2>";
+
+$message =  $resultat;
 
 }
 
@@ -89,14 +90,11 @@ echo "<h2>Résultat : $resultat </h2>";
         <button type="submit" name="Calculer">Resultat : </button>
 
 <label for="Resultat">Resultat</label>
-<input type="text" class="">
+<input type="text" value="<?php if(isset($resultat))  echo $resultat; ?>" >
 
     </form>
 
 
 
-
-
 </body>
-
 </html>
