@@ -67,10 +67,10 @@ if (isset($_POST['Calculer'])) {
     <form action="" method="post">
 
         <label for="Nombre1">Nombre1</label>
-        <input type="number" name="Nombre1">
+        <input type="number" name="Nombre1" required placeholder="Entrer le premier nombre">
         <br>
         <label for="Nombre2">Nombre2</label>
-        <input type="number" name="Nombre2">
+        <input type="number" name="Nombre2" required placeholder="Entrer le deuxième nombre">
         <br>
 
         <label for="Operation">Operation</label>
