@@ -22,6 +22,7 @@ if (isset($_POST['Calculer'])) {
             $resultat = $Nombre1 - $Nombre2;
             break;
 
+    
 
         case 'Multiplication':
             $resultat = $Nombre1 * $Nombre2;
