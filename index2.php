@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_POST['Envoyer'])) {
-    $Users = $_POST['Nom_utilisateur'];
-    $MDP = $_POST['Mot_de_passe'];
+    $Users = htmlspecialchars(trim($_POST['Nom_utilisateur']));
+    $MDP = sha1($_POST['Mot_de_passe']);
     $errors = [];
 
     // Vérification des règles de mot de passe
