@@ -51,10 +51,9 @@ $message = "Adresse e-mail n'est pas valide" . implode(".",$errors);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     
-
-
 
 <h1>FORMULAIRE</h1>
 
@@ -64,7 +63,6 @@ $message = "Adresse e-mail n'est pas valide" . implode(".",$errors);
 <input type="email" name="Mail" placeholder="Entrer votre mot de passe" required>
 
 <button type="submit" name="Envoyer">Envoyer</button>
-
 
 </form>
 
